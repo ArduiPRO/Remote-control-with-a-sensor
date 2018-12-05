@@ -22,10 +22,10 @@
     void loop() {
 
     //read a gesture from the device
-    uint8_t gesture = apds.readGesture();
-    if (gesture == APDS9960_DOWN){
-    Serial.println("ZOOM -");
-    irsend.sendNEC(0xC1AA916E, 32);
+    uint8_t gesture = apds.readGesture(); //read the movement the apds 9960 senses 
+    if (gesture == APDS9960_DOWN){        // if th movement of the gesture is down 
+    Serial.println("ZOOM -");             // Show on the screen 
+    irsend.sendNEC(0xC1AA916E, 32);       // Send the HEX to the projector to put the volume down 
     }
     if (gesture == APDS9960_UP){ 
     Serial.println("ZOOM +");
