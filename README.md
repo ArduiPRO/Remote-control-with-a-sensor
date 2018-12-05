@@ -1,4 +1,4 @@
-# Code for the Receiver
+ # Code for the IR Receiver
     #include <IRremote.h>
 
     const int RECV_PIN = 7;
@@ -17,7 +17,8 @@
         irrecv.resume();
       }
     }
-#Code for the Transmitter and apds 9960 Sensor
+    
+#  Code for the IR Transmitter and apds 9960 Sensor
 
     #include "Adafruit_APDS9960.h"
     Adafruit_APDS9960 apds;
